@@ -15,4 +15,5 @@
 > 2. There is already DBA Name. Therefore, there is no need of AKA Name which also contain some null values.
 > 3. More than 50per of the data is Canvass Inspection type. 
 > 4. Majority of them are Restaurants.
+> 5. Large amount of data is with High Risk category and at the same time it has high Pass result.
 
