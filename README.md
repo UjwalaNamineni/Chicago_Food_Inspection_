@@ -1,4 +1,4 @@
-# Chicago_Food_Inspection_
+# Chicago_Food_Inspections_
 ## Problem Overview
 > 1. Interest in food made me to analyse the data related to food.
 > 2. This data is from the Chicago Data Portal. It is an analysis of food inspection in Chicago in various food outlets.
