@@ -17,3 +17,31 @@
 > 4. Majority of them are Restaurants.
 > 5. Large amount of data is with High Risk category and at the same time it has high Pass result.
 
+# Feauture Selection
+> 1. From the exploratory data analysis, the majority of the data is ‘Pass’ when the risk is high or at "Risk (High)". So, it could be the feature. After modeling, I found out that it is not useful to predict the Fail cases.
+> 2. Therefore, the other feature that gives a better prediction is ‘Violations’. 
+> 3. The target column is ‘Results’ (‘Pass’, ‘Fail’, ‘Pass w/ conditions’).
+
+# Model Evaluation
+> 1. Split the data into training and test data which is in 3:2.
+> 2. Logistic regression, decision tree classifier, Random Forest Classifier, and hyper-parameters tuning of these models is done.
+> 3. One vs one (macro and weighted by prevalence) and one vs rest (macro and weighted by prevalence) are done.
+
+# Findings
+> 1. ‘Violations’ is the feature column.
+> 2. Using this data after hyper parameters tuning, the Random forest classifier has the highest accuracy of 87%, followed by a decision tree classifier of 86% and logistic regression of 60%.
+> 3. Test score prediction score is 87% and train score prediction is 99%.
+> 4. After one vs one and one vs rest, the accuracy or AUC ROC score is 93% and 94% respectively (macro).
+> 5. After one vs one and one vs rest, the accuracy or AUC ROC score is 94% and 95% respectively (weighted by prevalence).
+
+# Challenges
+> 1. Selection of feature column.
+> 2. Dealing with the columns because most of the columns are categorical columns.
+> 3. Modelling, finding the best model to improve the accuracy of the prediction.
+
+# Conclusion
+> 1. Using the final model (one vs rest, weighted by the prevalence (in this case)), inspectors can easily predict that there will be a decrease in the chances of visiting each location for inspection. 
+> 2. Even the owners of the restaurants or the food stores can predict the result and can take safety measures to avoid failing in the inspection. 
+> 3. Therefore, this model helps in the detection of inspection results and improves the quality of food.
+
+
