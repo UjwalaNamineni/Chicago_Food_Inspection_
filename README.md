@@ -10,36 +10,36 @@
 > 3. Data: https://data.cityofchicago.org/api/assets/BAD5301B-681A-4202-9D25-51B2CAE672FF
 > 4. Dataset: https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4ijn-s7e5/data
 
-# Exploratory Data Analysis
+## Exploratory Data Analysis
 > 1. Majority of the data or almost all the data is from Chicago and IL. Therefore, there won't be any useful information from State and City columns.
 > 2. There is already DBA Name. Therefore, there is no need of AKA Name which also contain some null values.
 > 3. More than 50per of the data is Canvass Inspection type. 
 > 4. Majority of them are Restaurants.
 > 5. Large amount of data is with High Risk category and at the same time it has high Pass result.
 
-# Feauture Selection
+## Feauture Selection
 > 1. From the exploratory data analysis, the majority of the data is ‘Pass’ when the risk is high or at "Risk (High)". So, it could be the feature. After modeling, I found out that it is not useful to predict the Fail cases.
 > 2. Therefore, the other feature that gives a better prediction is ‘Violations’. 
 > 3. The target column is ‘Results’ (‘Pass’, ‘Fail’, ‘Pass w/ conditions’).
 
-# Model Evaluation
+## Model Evaluation
 > 1. Split the data into training and test data which is in 3:2.
 > 2. Logistic regression, decision tree classifier, Random Forest Classifier, and hyper-parameters tuning of these models is done.
 > 3. One vs one (macro and weighted by prevalence) and one vs rest (macro and weighted by prevalence) are done.
 
-# Findings
+## Findings
 > 1. ‘Violations’ is the feature column.
 > 2. Using this data after hyper parameters tuning, the Random forest classifier has the highest accuracy of 87%, followed by a decision tree classifier of 86% and logistic regression of 60%.
 > 3. Test score prediction score is 87% and train score prediction is 99%.
 > 4. After one vs one and one vs rest, the accuracy or AUC ROC score is 93% and 94% respectively (macro).
 > 5. After one vs one and one vs rest, the accuracy or AUC ROC score is 94% and 95% respectively (weighted by prevalence).
 
-# Challenges
+## Challenges
 > 1. Selection of feature column.
 > 2. Dealing with the columns because most of the columns are categorical columns.
 > 3. Modelling, finding the best model to improve the accuracy of the prediction.
 
-# Conclusion
+## Conclusion
 > 1. Using the final model (one vs rest, weighted by the prevalence (in this case)), inspectors can easily predict that there will be a decrease in the chances of visiting each location for inspection. 
 > 2. Even the owners of the restaurants or the food stores can predict the result and can take safety measures to avoid failing in the inspection. 
 > 3. Therefore, this model helps in the detection of inspection results and improves the quality of food.
